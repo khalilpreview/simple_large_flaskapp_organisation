@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+<head>
+    {% block styles %}
+
+    {{super()}}
+
+    {% endblock %}
+
+    <title>{% block title %} 
+
+           {% endblock %}</title>
+</head>
+
+
+<body>
+
+    {% block content %}
+        <h1>Hello i am index from Dashboard templates and views.py</h1>
+    {% endblock %}
+    
+
+    <!-- Block Scripts start here -->
+    {% block scripts %}
+    
+    {{super()}}
+
+    {% endblock %}
+</body>
+
+</html>

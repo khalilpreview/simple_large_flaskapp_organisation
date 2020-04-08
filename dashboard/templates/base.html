@@ -1,0 +1,46 @@
+<!-- Admine base.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Block styles -->
+    {% block styles %}
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{url_for('.static' , filename='css/bootstrap.css')}}">
+    <!-- mystyle CSS -->
+    <link rel="stylesheet" href="{{url_for('.static' , filename='css/dashboard_style.css')}}">
+
+    {% endblock %}
+
+    <!-- Block Title -->
+    <title>{% block title %}    {% endblock %}</title>
+
+</head>
+
+<body>
+
+    <!-- Block Content -->
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- Block Scripts -->
+    {% block scripts %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{url_for('.static' , filename='js/jquery.js')}}"> </script>
+    <!-- Popper JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- Bootstrapl JavaScript -->
+    <script src="{{url_for('.static' , filename='js/bootstrap.js')}}" ></script>
+    
+   {% endblock %}
+
+</body>
+
+</html>
