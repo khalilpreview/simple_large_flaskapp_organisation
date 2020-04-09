@@ -8,6 +8,9 @@ from admin.admin_views import admin_views
 # Flask app initialisation
 app = Flask(__name__)
 
+
+app.config.from_pyfile('config.py')
+
 # Calling blueprints 
 app.register_blueprint(admin_views , url_prefix="/admin")
 app.register_blueprint(dashboard_views , url_prefix="/dashboard")
